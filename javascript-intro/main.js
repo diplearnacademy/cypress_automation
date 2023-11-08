@@ -111,3 +111,86 @@ function cicloDoWhile(i = 0){
 
 cicloWhile(2)
 cicloDoWhile(10)
+
+function cicloFor(){
+    
+    for(let i = 0; i < 3; i++){
+        console.log(i);
+    }
+}
+
+cicloFor()
+
+function tryAndCatch(){
+    let conexion = null
+    try {
+        // manipulo el file
+        throwError(3)
+    } catch (e) {
+        console.log("Se lanzo un error " + e)
+    } finally {
+        if(conexion != null)
+            // llamar a la funcion para cerrar el file 
+            // cerrar la conexion
+        console.log("Finally")
+    }
+}
+
+function throwError(i){
+    if(i === 5)
+        throw new RangeError("Error i = 5")
+
+    console.log(i)
+}
+
+tryAndCatch()
+
+
+series.forEach(
+    (item, index, items) => console.log(item + " - " +index)
+);
+
+
+// *************** PROMESAS *********************
+
+
+function throwErrorPromise(i){
+    if(i === 5)
+        throw new RangeError("Error i = 5")
+
+    console.log(i)
+}
+
+function consultarEnBD() {
+    setTimeout(()=> "", 30000)
+    return 0
+}
+
+let promise = new Promise( (resolve, reject) => {
+    let result = consultarEnBD()
+    if(result !== 0)
+        reject(500)
+    resolve(200)
+    /**
+     * 
+     try {
+        throwErrorPromise(5)
+        setTimeout(()=> resolve("Lanzamos la cancion"), 30000)
+    } catch(e) {
+        setTimeout(()=> reject("Algo salio mal con la cancion"), 30000)
+    } 
+     *  */   
+})
+
+promise.catch(error => console.log("La cancion NO SALIO"))
+
+promise
+    .finally(()=> console.log("Finally"))
+    .then(
+    result => console.log("Escuchar la cancion = " + result),
+    error => {
+        console.log("No puedo escuchar la cancion = " + error)
+    }
+)
+
+console.log("FIN -----")
