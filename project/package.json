@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@faker-js/faker": "^8.2.0",
+    "@faker-js/faker": "^8.3.1",
     "cypress": "^13.4.0",
     "cypress-mochawesome-reporter": "^3.6.1"
   },
@@ -184,7 +184,7 @@
   "scripts": {
     "test": "cypress run",
     "version": "cypress version",
-    "open":"cypress open --e2e -b chrome"
+    "open": "cypress open --e2e -b chrome"
   },
   "keywords": [
     "cypress",
