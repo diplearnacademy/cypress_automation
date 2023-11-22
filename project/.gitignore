@@ -3,9 +3,10 @@ node_modules/
 dist/
 
 # cypress Report
-./cypress/reports
-./cypress/videos
-cypress/reports/
+cypress/reports
+cypress/videos
+cypress/reports
+cypress/screenshots
 
 package-lock.json
 *.log
