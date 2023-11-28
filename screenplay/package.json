@@ -189,6 +189,14 @@
     "e2e",
     "screenplay"
   ],
+  "cypress-cucumber-preprocessor": {
+    "html": {
+      "enabled": true
+    },
+    "pretty": {
+      "enabled": true
+    }
+  },
   "author": "Cesar Meneses",
   "license": "MIT"
 }

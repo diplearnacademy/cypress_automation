@@ -9,3 +9,7 @@ cypress/screenshots
 
 package-lock.json
 *.log
+
+# Reporte Cucumber
+*.ndjson
+cucumber-report.html
